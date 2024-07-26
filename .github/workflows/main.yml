@@ -11,6 +11,10 @@ jobs:
           uses: cypress-io/github-action@v6
           with:
             command: npm run cy:run
+        - name: Allure report gen
+          uses: cypress-io/github-action@v6
+          with:
+            command: npm run allure:open
 
         - name: Generate Allure Report
           uses: simple-elf/allure-report-action@master
